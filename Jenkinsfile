@@ -5,6 +5,10 @@ pipeline {
         //cron('39 15 * * *','40 15 * * *')
     //}
     
+     triggers {
+     upstream(upstreamProjects: "test_multi_branch_cron", threshold: hudson.model.Result.SUCCESS)
+	}
+
     #nvironment {
        #def causes = currentBuild.rawBuild.getCauses()
        #def specificCause = currentBuild.rawBuild.getCause(hudson.triggers.TimerTrigger$TimerTriggerCause)
