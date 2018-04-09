@@ -9,13 +9,6 @@ pipeline {
      upstream(upstreamProjects: "test_multi_branch_cron", threshold: hudson.model.Result.SUCCESS)
 	}
 
-    #nvironment {
-       #def causes = currentBuild.rawBuild.getCauses()
-       #def specificCause = currentBuild.rawBuild.getCause(hudson.triggers.TimerTrigger$TimerTriggerCause)
-       #def specificCause_2 = currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause)
-       #def disc = getShortDescription()
-
-    #}
     
     // def causes = currentBuild.rawBuild.getCauses()
     // println causes
